@@ -1,0 +1,13 @@
+<div class="bg-slate-100 border border-slate-400 rounded p-3 mt-4">
+    {{ taskItem().task }}
+
+    <div class="mt-2">
+        @for (action of action(); track $index){
+        <button class="px-2 py-1 text-xs border border-slate-400 bg-white hover:bg-slate-200 rounded mr-2 cursor-pointer" (click)="changeStatus(action)">
+            {{action}}
+        </button>
+        }
+    </div>
+
+
+</div>
